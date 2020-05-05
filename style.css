@@ -1,0 +1,101 @@
+			*{
+				box-sizing: border-box;
+			}
+			body{
+				background: #070F3F;
+				padding: 3px;
+			}
+			.calculator-container{
+					margin-top:0.5em;
+					border: 5px solid white;
+					border-radius: 20px;
+					background: silver;
+					padding: 12px;
+				}
+			.numButton{
+				font-weight: bolder;
+				font-size: 1.5em;
+				background: white;
+				border-radius: 6px;
+				width: 26%;
+				height: 2em;
+				padding-top: 0.5em;
+				margin: 6px;
+				text-align: center;
+				display: block;
+			}
+			.opButton{
+				font-weight: bolder;
+				font-size: 1.5em;
+				background: white;
+				border-radius: 6px;
+				margin: 6px;
+				text-align: center;
+				display: block;
+				width: 90%;
+				height: 2em;
+				padding-top: 0.5em;
+			}
+			.display{
+				border: 2px solid brown;
+				border-radius: 8px;
+				font-size: 1.8em;
+				margin-top: 0.7em;
+				font-family: 'Oswald', sans-serif;
+				/*margin-bottom: 0.7em;*/
+				width: 100%;
+				text-align: right;
+				padding: 2px;
+				display: block;
+			}
+			.numPad{
+				width: 80%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content:space-around;
+			}
+
+			.opPad{
+				width: 20%;
+				display: flex;
+				flex-direction: column;
+				justify-content:space-around;
+			}
+			.control{
+				display: flex;
+			}
+			.btmrow{
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content:space-around;
+			}
+			.btmButton{
+				font-weight: bolder;
+				font-size: 1.5em;
+				background: white;
+				border-radius: 6px;
+				width: 20%;
+				margin: 6px;
+				text-align: center;
+				display: block;
+				height: 2em;
+				padding-top: 0.5em;
+			}
+			.lbldiv{
+				display: flex;
+				justify-content:left;
+				height: 1em;
+				padding-top: 2px;
+				padding-right: 20px;
+				border-radius: 3px;
+				display: block;
+				text-align: right;
+				font-size: 1em;
+			}
+			@media only screen and (min-width: 788px){
+				.calculator-container{
+					margin: auto;
+					width: 30%;
+				}
+			}
