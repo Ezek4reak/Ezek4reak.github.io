@@ -23,23 +23,29 @@
 				margin: 6px;
 				text-align: center;
 				display: block;
+				background: #615D5E;
+				color: white;
+				border: 1px solid white;
+				box-shadow: 0 6px 8px gray;
 			}
 			.opButton{
 				font-weight: bolder;
-				font-size: 1.5em;
+				font-size: 2em;
 				background: white;
 				border-radius: 6px;
 				margin: 6px;
 				text-align: center;
 				display: block;
 				width: 90%;
-				height: 2em;
-				padding-top: 0.5em;
+				height: 1.5em;
+				border: 1px solid gray;
+				box-shadow: 0 6px 8px gray;
+				
 			}
 			.display{
 				border: 2px solid brown;
 				border-radius: 8px;
-				font-size: 1.8em;
+				font-size: 2em;
 				margin-top: 0.7em;
 				font-family: 'Oswald', sans-serif;
 				/*margin-bottom: 0.7em;*/
@@ -53,6 +59,7 @@
 				display: flex;
 				flex-wrap: wrap;
 				justify-content:space-around;
+				margin-top: 1em;
 			}
 
 			.opPad{
@@ -60,6 +67,7 @@
 				display: flex;
 				flex-direction: column;
 				justify-content:space-around;
+				margin-top: 1em;
 			}
 			.control{
 				display: flex;
@@ -80,7 +88,9 @@
 				text-align: center;
 				display: block;
 				height: 2em;
-				padding-top: 0.5em;
+				padding-top: 0.3em;
+				border: 1px solid gray;
+				box-shadow: 0 6px 8px gray;
 			}
 			.lbldiv{
 				display: flex;

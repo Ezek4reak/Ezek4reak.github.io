@@ -48,6 +48,10 @@
 			var back = document.querySelector('.back');
 			var lab = document.querySelector('.lbl');
 
+			back.style.background = "#CE688A";
+			back.style.padding = "1px";
+			dot.style.padding = "1px";
+			back.style.color = "white";
 			//Numbers response functions
 			one.addEventListener('click', function(){
 				if (calculated || opSet || display.value === "0") {
