@@ -162,6 +162,10 @@
 			});
 			//Operators functions
 			plus.addEventListener('click', function(){
+				if(operator){
+					calculate();
+					opSet = true;
+				}
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				operator = "+";
@@ -169,6 +173,10 @@
 				opSet = true;
 			});
 			minus.addEventListener('click', function(){
+				if(operator){
+					calculate();
+					opSet = true;
+				}
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				operator = "-";
@@ -176,6 +184,10 @@
 				opSet = true;
 			});
 			divid.addEventListener('click', function(){
+				if(operator){
+					calculate();
+					opSet = true;
+				}
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				operator = "/";
@@ -183,6 +195,10 @@
 				opSet = true;
 			});
 			multiply.addEventListener('click', function(){
+				if(operator){
+					calculate();
+					opSet = true;
+				}
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				operator = "*";
@@ -217,6 +233,10 @@
 				lab.innerHTML = num1+"<sup>3</sup>";
 			});
 			mod.addEventListener('click', function(){
+				if(operator){
+					calculate();
+					opSet = true;
+				}
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				operator = "%";
@@ -224,6 +244,10 @@
 				opSet = true;
 			});
 			pow.addEventListener('click', function(){
+				if(operator){
+					calculate();
+					opSet = true;
+				}
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				operator = "pow";
@@ -239,7 +263,9 @@
 				calculated = true;
 				lab.innerHTML = num1+"!";
 			});
-			equal.addEventListener('click', function(){
+			equal.addEventListener('click', calculate);
+
+			function calculate(){
 				num2 = Number(display.value);
 				switch(operator){
 					case "+":
@@ -289,4 +315,5 @@
 						calculated = false;
 						break;
 				}
-			});
+				operator = "";
+			}
