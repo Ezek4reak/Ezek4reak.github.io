@@ -157,6 +157,10 @@
 			});
 			clear.addEventListener('click', function(){
 				display.value = "";
+				num1 = "";
+				num2 = "";
+				opSet = false;
+				calculated = false;
 			});
 			//Operators functions
 			plus.addEventListener('click', function(){
