@@ -3,7 +3,7 @@
 			}
 			body{
 				background: #070F3F;
-				padding: 3px;
+				overflow: hidden;
 			}
 			.calculator-container{
 					margin-top:0.5em;
@@ -18,8 +18,7 @@
 				background: white;
 				border-radius: 6px;
 				width: 26%;
-				height: 2em;
-				padding-top: 0.5em;
+				height: 2.4em;
 				margin: 6px;
 				text-align: center;
 				display: block;
@@ -30,14 +29,14 @@
 			}
 			.opButton{
 				font-weight: bolder;
-				font-size: 2em;
+				font-size: 1.5em;
 				background: white;
 				border-radius: 6px;
 				margin: 6px;
 				text-align: center;
 				display: block;
 				width: 90%;
-				height: 1.5em;
+				height: 2.4em;
 				border: 1px solid gray;
 				box-shadow: 0 6px 8px gray;
 				
@@ -87,8 +86,7 @@
 				margin: 6px;
 				text-align: center;
 				display: block;
-				height: 2em;
-				padding-top: 0.3em;
+				height: 2.4em;
 				border: 1px solid gray;
 				box-shadow: 0 6px 8px gray;
 			}
@@ -103,9 +101,12 @@
 				text-align: right;
 				font-size: 1em;
 			}
+			button:focus{
+				outline: none;
+			}
 			@media only screen and (min-width: 788px){
 				.calculator-container{
 					margin: auto;
-					width: 30%;
+					width: 40%;
 				}
 			}

@@ -47,10 +47,8 @@
 			var clear = document.querySelector('.clear');
 			var back = document.querySelector('.back');
 			var lab = document.querySelector('.lbl');
-
+			
 			back.style.background = "#CE688A";
-			back.style.padding = "1px";
-			dot.style.padding = "1px";
 			back.style.color = "white";
 			//Numbers response functions
 			one.addEventListener('click', function(){
@@ -169,8 +167,9 @@
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				operator = "+";
-				lab.textContent = num1 + " +";
+				lab.textContent = numberWithCommas(num1) + " +";
 				opSet = true;
+				
 			});
 			minus.addEventListener('click', function(){
 				if(operator){
@@ -180,7 +179,7 @@
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				operator = "-";
-				lab.textContent = num1 + " -";
+				lab.textContent = numberWithCommas(num1) + " -";
 				opSet = true;
 			});
 			divid.addEventListener('click', function(){
@@ -191,7 +190,7 @@
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				operator = "/";
-				lab.innerHTML = num1 + " &#247";
+				lab.innerHTML = numberWithCommas(num1) + " &#247";
 				opSet = true;
 			});
 			multiply.addEventListener('click', function(){
@@ -202,7 +201,7 @@
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				operator = "*";
-				lab.innerHTML = num1 + " &#215;";
+				lab.innerHTML = numberWithCommas(num1) + " &#215;";
 				opSet = true;
 			});
 			sqrt.addEventListener('click', function(){
@@ -212,7 +211,7 @@
 				answer= numberWithCommas(answer)
 				display.value = answer;
 				calculated = true;
-				lab.innerHTML = "&radic;"+num1;
+				lab.innerHTML = "&radic;"+numberWithCommas(num1);
 			});
 			sqr.addEventListener('click', function(){
 				num1 = display.value;
@@ -221,7 +220,7 @@
 				answer= numberWithCommas(answer)
 				display.value = answer;
 				calculated = true;
-				lab.innerHTML = num1+"<sup>2</sup>";
+				lab.innerHTML = numberWithCommas(num1)+"<sup>2</sup>";
 			});
 			cube.addEventListener('click', function(){
 				num1 = display.value;
@@ -230,7 +229,7 @@
 				answer= numberWithCommas(answer)
 				display.value = answer;
 				calculated = true;
-				lab.innerHTML = num1+"<sup>3</sup>";
+				lab.innerHTML = numberWithCommas(num1)+"<sup>3</sup>";
 			});
 			mod.addEventListener('click', function(){
 				if(operator){
@@ -240,7 +239,7 @@
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				operator = "%";
-				lab.innerHTML = num1+" %";
+				lab.innerHTML = numberWithCommas(num1)+" %";
 				opSet = true;
 			});
 			pow.addEventListener('click', function(){
@@ -251,7 +250,7 @@
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				operator = "pow";
-				lab.innerHTML = num1+"<sup>^</sup>";
+				lab.innerHTML = numberWithCommas(num1)+"<sup>^</sup>";
 				opSet = true;
 			});
 			fact.addEventListener('click', function(){
@@ -261,10 +260,10 @@
 				answer= numberWithCommas(answer)
 				display.value = answer;
 				calculated = true;
-				lab.innerHTML = num1+"!";
+				lab.innerHTML = numberWithCommas(num1)+"!";
 			});
 			equal.addEventListener('click', calculate);
-
+			
 			function calculate(){
 				num2 = Number(display.value);
 				switch(operator){
@@ -272,42 +271,42 @@
 						answer = num1 + num2;
 						answer= numberWithCommas(answer);
 						display.value = answer;
-						lab.innerHTML = num1 + " + "+ num2 +" = "+ answer;
+						lab.innerHTML = numberWithCommas(num1) + " + "+ numberWithCommas(num2) +" = "+ answer;
 						calculated = true;
 						break;
 					case "-":
 						answer = num1 - num2;
 						answer= numberWithCommas(answer);
 						display.value = answer;
-						lab.innerHTML = num1 + " - "+num2 +" = "+ answer;
+						lab.innerHTML = numberWithCommas(num1) + " - "+numberWithCommas(num2) +" = "+ answer;
 						calculated = true;
 						break;
 					case "/":
 						answer = num1 / num2;
 						answer= numberWithCommas(answer);
 						display.value = answer;
-						lab.innerHTML = num1 + " &#247; "+num2 +" = "+ answer;
+						lab.innerHTML = numberWithCommas(num1) + " &#247; "+numberWithCommas(num2) +" = "+ answer;
 						calculated = true;
 						break;
 					case "*":
 						answer = num1 * num2;
 						answer= numberWithCommas(answer);
 						display.value = answer;
-						lab.innerHTML = num1 + " &#215; "+num2 +" = "+ answer;
+						lab.innerHTML = numberWithCommas(num1) + " &#215; "+numberWithCommas(num2) +" = "+ answer;
 						calculated = true;
 						break;
 					case "%":
 						answer = num1 % num2;
 						answer= numberWithCommas(answer);
 						display.value = answer;
-						lab.innerHTML = num1 + " % "+num2 +" = "+ answer;
+						lab.innerHTML = numberWithCommas(num1) + " % "+numberWithCommas(num2) +" = "+ answer;
 						calculated = true;
 						break;
 					case "pow":
 						answer = Math.pow(num1, num2);
 						answer= numberWithCommas(answer);
 						display.value = answer;
-						lab.innerHTML = num1 + "<sup>"+num2+"</sup>" +" = "+ answer;
+						lab.innerHTML = numberWithCommas(num1) + "<sup>"+numberWithCommas(num2)+"</sup>" +" = "+ answer;
 						calculated = true;
 						break;
 					default:
@@ -315,5 +314,6 @@
 						calculated = false;
 						break;
 				}
-				operator = "";
+				operator = "";				
 			}
+			
