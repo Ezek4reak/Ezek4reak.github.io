@@ -13,8 +13,11 @@
             "type": "image/png"
         }
     ],
+    "name": "Ez-Calculator",
+    "short_name" : "Ez-Calc",
+    "start_url": "index.html?utm_source=homescreen",
+    "scope" : "./",
     "theme_color": "#182350",
     "background_color": "#182350",
-    "start_url": "https://ezek4reak'github.io",
     "display": "standalone"
 }
