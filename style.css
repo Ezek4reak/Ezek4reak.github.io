@@ -18,7 +18,7 @@
 				background: white;
 				border-radius: 6px;
 				width: 26%;
-				height: 2.3em;
+				height: 2.2em;
 				margin: 6px;
 				text-align: center;
 				display: block;
@@ -36,7 +36,7 @@
 				text-align: center;
 				display: block;
 				width: 90%;
-				height: 2.3em;
+				height: 2.2em;
 				border: 1px solid gray;
 				box-shadow: 0 6px 8px gray;
 				
@@ -84,7 +84,7 @@
 				margin: 6px;
 				text-align: center;
 				display: block;
-				height: 2.3em;
+				height: 2.2em;
 				border: 1px solid gray;
 				box-shadow: 0 6px 8px gray;
 			}
