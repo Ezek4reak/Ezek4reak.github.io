@@ -1,3 +1,8 @@
+ if ('serviceWorker' in navigator) { 
+ // register service worker 
+ navigator.serviceWorker.register('/service-worker.js'); 
+}
+			
 			function numberWithCommas(x) {
 				var parts = x.toString().split(".");
 				parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ","); 
