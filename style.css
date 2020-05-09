@@ -10,7 +10,7 @@
 					border: 5px solid white;
 					border-radius: 20px;
 					background: silver;
-					padding: 2em 0.5em 0.5em;
+					padding: 1.5em 0.5em 0.5em;
 					width: 100%;
 					height: 100%;
 				}
@@ -116,9 +116,9 @@
 				text-align: center;
 				display: block;
 				font-weight: bold;
-				background: #694003;
-				color: white;
-				border: 1px solid white;
+				background: white;
+				color: #694003;
+				border: 1px solid #694003;
 			}
 			@media only screen and (min-width: 768px){
 				.calculator-container{
