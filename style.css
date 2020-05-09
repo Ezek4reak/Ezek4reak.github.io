@@ -47,7 +47,6 @@
 				border: 2px solid brown;
 				border-radius: 8px;
 				font-size: 2em;
-				margin-top: 0.5em;
 				font-family: 'Oswald', sans-serif;
 				/*margin-bottom: 0.7em;*/
 				width: 100%;
@@ -111,9 +110,8 @@
 				font-size: 1em;
 				border-radius: 3px;
 				padding: 2px;
-				width: 80%;
+				width: 98%;
 				margin: auto;
-                                margin-bottom:4px;
 				text-align: center;
 				display: block;
 				font-weight: bold;
