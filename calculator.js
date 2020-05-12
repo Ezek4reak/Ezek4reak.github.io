@@ -1,8 +1,12 @@
- if ('serviceWorker' in navigator) { 
- // register service worker 
- navigator.serviceWorker.register('/service-worker.js'); 
-}
-			
+			 if ('serviceWorker' in navigator) { 
+			 	// register service worker 
+			 	navigator.serviceWorker.register('/service-worker.js'); 
+			}
+			function playSound() {
+				var sound = document.getElementById("audio");
+				sound.playbackRate = 3;
+				sound.play();
+			}
 			function numberWithCommas(x) {
 				var parts = x.toString().split(".");
 				parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ","); 
@@ -57,6 +61,7 @@
 			back.style.color = "white";
 			//Numbers response functions
 			one.addEventListener('click', function(){
+				playSound();
 				if (calculated || opSet || display.value === "0") {
 					display.value = '1';
 					calculated = false;
@@ -66,6 +71,7 @@
 				}
 			});
 			two.addEventListener('click', function(){
+				playSound();
 				if (calculated || opSet || display.value === "0") {
 					display.value = '2';
 					calculated = false;
@@ -75,6 +81,7 @@
 				}
 			});
 			three.addEventListener('click', function(){
+				playSound();
 				if (calculated || opSet || display.value === "0") {
 					display.value = '3';
 					calculated = false;
@@ -84,6 +91,7 @@
 				}
 			});
 			four.addEventListener('click', function(){
+				playSound();
 				if (calculated || opSet || display.value === "0") {
 					display.value = '4';
 					calculated = false;
@@ -93,6 +101,7 @@
 				}
 			});
 			five.addEventListener('click', function(){
+				playSound();
 				if (calculated || opSet || display.value === "0") {
 					display.value = '5';
 					calculated = false;
@@ -102,6 +111,7 @@
 				}
 			});
 			six.addEventListener('click', function(){
+				playSound();
 				if (calculated || opSet || display.value === "0") {
 					display.value = '6';
 					calculated = false;
@@ -111,6 +121,7 @@
 				}
 			});
 			seven.addEventListener('click', function(){
+				playSound();
 				if (calculated || opSet || display.value === "0") {
 					display.value = '7';
 					calculated = false;
@@ -120,6 +131,7 @@
 				}
 			});
 			eight.addEventListener('click', function(){
+				playSound();
 				if (calculated || opSet || display.value === "0") {
 					display.value = '8';
 					calculated = false;
@@ -129,6 +141,7 @@
 				}
 			});
 			nine.addEventListener('click', function(){
+				playSound();
 				if (calculated || opSet || display.value === "0") {
 					display.value = '9';
 					calculated = false;
@@ -138,6 +151,7 @@
 				}
 			});
 			zero.addEventListener('click', function(){
+				playSound();
 				if (display.value==="" || calculated || opSet) {
 					display.value = "";
 					calculated = false;
@@ -147,6 +161,7 @@
 				}
 			});
 			dot.addEventListener('click', function(){
+				playSound();
 				if (display.value==="" || calculated || opSet) {
 					display.value = "0.";
           			calculated = false;
@@ -157,10 +172,12 @@
 			});
 			//control functions
 			back.addEventListener('click', function(){
+				playSound();
 				let value = display.value;
 				display.value = value.substr(0, value.length - 1);
 			});
 			clear.addEventListener('click', function(){
+				playSound();
 				display.value = "";
 				num1 = "";
 				num2 = "";
@@ -169,6 +186,7 @@
 			});
 			//Operators functions
 			plus.addEventListener('click', function(){
+				playSound();
 				if(operator){
 					calculate();
 					opSet = true;
@@ -178,9 +196,10 @@
 				operator = "+";
 				lab.textContent = numberWithCommas(num1) + " +";
 				opSet = true;
-				
+
 			});
 			minus.addEventListener('click', function(){
+				playSound();
 				if(operator){
 					calculate();
 					opSet = true;
@@ -192,6 +211,7 @@
 				opSet = true;
 			});
 			divid.addEventListener('click', function(){
+				playSound();
 				if(operator){
 					calculate();
 					opSet = true;
@@ -203,6 +223,7 @@
 				opSet = true;
 			});
 			multiply.addEventListener('click', function(){
+				playSound();
 				if(operator){
 					calculate();
 					opSet = true;
@@ -214,6 +235,7 @@
 				opSet = true;
 			});
 			sqrt.addEventListener('click', function(){
+				playSound();
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				answer = Math.sqrt(num1);
@@ -223,6 +245,7 @@
 				lab.innerHTML = "&radic;"+numberWithCommas(num1);
 			});
 			sqr.addEventListener('click', function(){
+				playSound();
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				answer = num1 * num1;
@@ -232,6 +255,7 @@
 				lab.innerHTML = numberWithCommas(num1)+"<sup>2</sup>";
 			});
 			cube.addEventListener('click', function(){
+				playSound();
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				answer = num1 * num1 * num1;
@@ -241,6 +265,7 @@
 				lab.innerHTML = numberWithCommas(num1)+"<sup>3</sup>";
 			});
 			mod.addEventListener('click', function(){
+				playSound();
 				if(operator){
 					calculate();
 					opSet = true;
@@ -252,6 +277,7 @@
 				opSet = true;
 			});
 			pow.addEventListener('click', function(){
+				playSound();
 				if(operator){
 					calculate();
 					opSet = true;
@@ -263,6 +289,7 @@
 				opSet = true;
 			});
 			fact.addEventListener('click', function(){
+				playSound();
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
 				answer = factorial(num1);
@@ -271,7 +298,10 @@
 				calculated = true;
 				lab.innerHTML = numberWithCommas(num1)+"!";
 			});
-			equal.addEventListener('click', calculate);
+			equal.addEventListener('click', function(){
+				playSound(); 
+				calculate();
+			});
 			
 			function calculate(){
 				num2 = Number(display.value);
