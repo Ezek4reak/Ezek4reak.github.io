@@ -1,15 +1,12 @@
-			 if ('serviceWorker' in navigator) { 
-			 	// register service worker 
-			 	navigator.serviceWorker.register('/service-worker.js'); 
-			}
 			function playSound() {
 				var sound = document.getElementById("audio");
 				sound.playbackRate = 3;
+				sound.volume = 0.2;
 				sound.play();
 			}
 			function numberWithCommas(x) {
 				var parts = x.toString().split(".");
-				parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ","); 
+				parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 				return parts.join(".");
 			}
 			function removeComma(x){
@@ -21,8 +18,8 @@
 					return x;
 				}else{
 					return x*factorial(x-1);
-				} 
-			} 
+				}
+			}
 			var num1, num2, operator, answer;
 			var calculated = false;
 			var opSet = false;
@@ -56,7 +53,7 @@
 			var clear = document.querySelector('.clear');
 			var back = document.querySelector('.back');
 			var lab = document.querySelector('.lbl');
-			
+
 			back.style.background = "#CE688A";
 			back.style.color = "white";
 			//Numbers response functions
@@ -302,7 +299,7 @@
 				playSound(); 
 				calculate();
 			});
-			
+
 			function calculate(){
 				num2 = Number(display.value);
 				switch(operator){
@@ -353,6 +350,5 @@
 						calculated = false;
 						break;
 				}
-				operator = "";				
+				operator = "";
 			}
-			
