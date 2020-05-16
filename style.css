@@ -176,7 +176,7 @@
 				}
 			}
 
-			@media only screen and (max-width: 360px) and (max-height: 640px) and (orientation: portrait){
+			@media only screen and (max-width: 385px) and (max-height: 640px) and (orientation: portrait){
 				.numButton, .opButton, .btmButton{
 					height: 2.2em;
 				}				
@@ -207,7 +207,7 @@
 				background: white;
 				border-radius: 6px;
 				width: 27%;
-				height: 1.8em;
+				height: auto;
 				margin: 5px;
 				text-align: center;
 				display: block;
@@ -225,7 +225,7 @@
 				text-align: center;
 				display: block;
 				width: 94%;
-				height: 1.8em;
+				height: auto;
 				border: 1px solid gray;
 				box-shadow: 0 6px 8px gray;
 				padding: 3px;
@@ -234,12 +234,12 @@
 			.display{
 				border: 2px solid brown;
 				border-radius: 8px;
-				font-size: 2em;
+				font-size: 1.7em;
 				font-family: 'Oswald', sans-serif;
 				margin: auto;
 				width: 100%;
 				text-align: right;
-				padding: 3px;
+				padding: 2px;
 				display: block;
 			}
 			.numPad{
@@ -247,8 +247,8 @@
 				display: flex;
 				flex-wrap: wrap;
 				justify-content:space-around;
-				margin-top: 0.4em;
-				margin-bottom: 0.4em;
+				margin-top: 0.1em;
+				margin-bottom: 0.1em;
 			}
 
 			.opPad{
@@ -256,8 +256,8 @@
 				display: flex;
 				flex-direction: column;
 				justify-content:space-between;
-				margin-top: 0.4em;
-				margin-bottom: 0.4em;
+				margin-top: 0.1em;
+				margin-bottom: 0.1em;
 			}
 			.control{
 				display: flex;
@@ -267,8 +267,7 @@
 				display: flex;
 				flex-wrap: wrap;
 				justify-content:space-around;
-				margin-top: 0.4em;
-				margin-bottom: 0.4em;
+				margin-bottom: 0.2em;
 			}
 			.btmButton{
 				font-weight: bolder;
@@ -279,12 +278,12 @@
 				margin: 5px;
 				text-align: center;
 				display: block;
-				height: 1.8em;
+				height: auto;
 				border: 1px solid gray;
 				box-shadow: 0 6px 8px gray;
 			}
 			.lbldiv{
-				height: 1.2em;
+				height: 1em;
 				padding-right: 14px;
 				display: block;
 				text-align: right;
@@ -298,7 +297,7 @@
 				border-radius: 3px;
 				padding: 4px;
 				width: 60%;
-				margin:0.6em auto 0.6em auto;
+				margin:0.3em auto 0.3em auto;
 				text-align: center;
 				display: block;
 				font-weight: bold;
