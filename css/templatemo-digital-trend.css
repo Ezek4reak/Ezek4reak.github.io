@@ -72,6 +72,7 @@ https://templatemo.com/tm-538-digital-trend
   h1,h2,h3,h4,h5,h6 {
     font-family: var(--title-font-family);
     line-height: inherit;
+    margin: 0;
   }
 
   h1 {
@@ -221,6 +222,21 @@ https://templatemo.com/tm-538-digital-trend
     color: yellow !important;
   }
 
+  .mylist{
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+    position: relative;
+  }
+
+  .mylist li {
+    cursor: pointer;
+    margin: 0.2em 0 0 0.6em;
+    color: white !important;
+  }
+
+  .container{
+    padding: 0 1em;
+  }
 
   /*---------------------------------------
     MENU             
@@ -354,14 +370,16 @@ https://templatemo.com/tm-538-digital-trend
   }
 
   .hero-bg {
-    background: linear-gradient(170deg, var(--primary-color) 64%, var(--white-color) 30%);
+    background: linear-gradient(140deg, var(--primary-color) 64%, var(--white-color) 30%);
   }
 
   .hero-image {
     position: relative;
     top: 2em;
   }
-
+  .hero-text {
+    padding: 0 1em;
+  }
 
 
   /*---------------------------------------
@@ -649,7 +667,7 @@ https://templatemo.com/tm-538-digital-trend
   @media screen and (max-width: 991px) {
 
     .hero {
-      padding-top: 14em;
+      padding-top: 4em;
     }
 
     .hero-text {
