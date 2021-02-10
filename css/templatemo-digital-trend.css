@@ -213,7 +213,13 @@ https://templatemo.com/tm-538-digital-trend
     display: block;
     width: 100%;
   }
+  .call-me{
+    color: white !important;
+  }
 
+  .call-me:hover{
+    color: yellow !important;
+  }
 
 
   /*---------------------------------------
@@ -343,7 +349,7 @@ https://templatemo.com/tm-538-digital-trend
 
   .hero {
     position: relative;
-    padding: 5em 0;
+    padding: 1em 0;
     overflow: hidden;
   }
 
