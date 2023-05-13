@@ -1,0 +1,23 @@
+{
+    "name": "Ez-Calculator",
+    "short_name": "Ez-Calculator",
+    "icons": [
+        {
+            "src": "/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "name": "Ez-Calculator",
+    "short_name" : "Ez-Calc",
+    "start_url": "index.html?utm_source=homescreen",
+    "scope" : "./",
+    "theme_color": "#182350",
+    "background_color": "#182350",
+    "display": "standalone"
+}

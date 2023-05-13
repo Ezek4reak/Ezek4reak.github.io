@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		<link rel="manifest" href="./site.webmanifest">
+		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="/favicon/favicon.ico">
+		<meta name="apple-mobile-web-app-title" content="Ez-Calculator">
+		<meta name="application-name" content="Ez-Calculator">
+		<meta name="msapplication-TileColor" content="#2b5797">
+		<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+		<meta name="theme-color" content="#182350">
+	</head>
+	<body>
+		<div class="calculator-container">
+		<audio id="audio" src="button-16.wav" autoplay="false" ></audio>
+	    <div>
+	        <div class="lone">&copy; Ez-Calculator</div>
+	    </div>
+	    <hr>
+	    <div><input type="text" class="display" placeholder="0"disabled></div>
+	    <hr>
+	    <div class="lbldiv lbl"></div>
+	    <hr>
+	    <div class="control-cover">
+		    <div class="control">
+		        <div class="numPad">
+
+		            <button class="numButton one"> 1 </button>
+		            <button class="numButton two"> 2 </button>
+		            <button class="numButton three"> 3 </button>
+		            <button class="numButton four"> 4 </button>
+		            <button class="numButton five"> 5 </button>
+		            <button class="numButton six"> 6 </button>
+		            <button class="numButton seven"> 7 </button>
+		            <button class="numButton eight"> 8 </button>
+		            <button class="numButton nine"> 9 </button>
+		            <button class="numButton zero"> 0 </button>
+		            <button class="numButton dot"> . </button>
+		            <button class="numButton equal"> = </button>
+		        </div>
+		        <div class="opPad">
+		            <button class="opButton plus">+</button>
+		            <button class="opButton minus">-</button>
+		            <button class="opButton divid">&#247</button>
+		            <button class="opButton multiply">&#215;</button>
+		        </div>
+		    </div>
+		    <hr>
+		    <div class="btmrow">
+		        <button class="btmButton back">&larr;</button>
+		        <button class="btmButton clear">c</button>
+		        <button class="btmButton mod">%</button>
+		        <button class="btmButton sqrt">&radic;</button>
+		        <button class="btmButton sqr">x<sup>2</sup></button>
+		        <button class="btmButton cube">x<sup>3</sup></button>
+		        <button class="btmButton pow">x<sup>x</sup></button>
+		        <button class="btmButton fact">n!</button>
+		    </div>
+		</div>
+	</div>
+		<script src="calculator.js"></script>
+	</body>
+</html>
