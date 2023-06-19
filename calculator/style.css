@@ -19,7 +19,7 @@
 				background: white;
 				border-radius: 6px;
 				width: 27%;
-				height: 2.4em;
+				height: 2.1em;
 				margin: 6px;
 				text-align: center;
 				display: block;
@@ -37,7 +37,7 @@
 				text-align: center;
 				display: block;
 				width: 94%;
-				height: 2.4em;
+				height: 2.1em;
 				border: 1px solid gray;
 				box-shadow: 0 6px 8px gray;
 				padding: 3px;
@@ -177,7 +177,7 @@
 
 			@media only screen and (max-width: 385px) and (max-height: 640px) and (orientation: portrait){
 				.numButton, .opButton, .btmButton{
-					height: 2.2em;
+					height: 2.1em;
 				}				
 			}
 
