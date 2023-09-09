@@ -20,39 +20,53 @@
 					return x*factorial(x-1);
 				}
 			}
+			//c alculate nth root of a number
+			//const nthroot = (x, n) => Math.pow(x, (1/n));
+			const nthroot = (number, n) => {
+				if(n===0){
+					return NaN //Cannot calculate 0th root	
+				}
+				if((number < 0) && (n % 2 === 0)){
+					return NaN //Cannot calculate even root of negetive numbers
+				}
+
+				let res =Math.pow(Math.abs(number), 1/n) * (number < 0 && n % 2 !== 0 ? -1 : 1);
+				return Math.round((res + Number.EPSILON) * 100) / 100;
+			};
+
 			var num1, num2, operator, answer;
 			var calculated = false;
 			var opSet = false;
 			//display TextBox
-			var display = document.querySelector('.display');
+			const display = document.querySelector('.display');
 			//Numbers Pad
-			var one = document.querySelector('.one');
-			var two = document.querySelector('.two');
-			var three = document.querySelector('.three');
-			var four = document.querySelector('.four');
-			var five = document.querySelector('.five');
-			var six = document.querySelector('.six');
-			var seven = document.querySelector('.seven');
-			var eight = document.querySelector('.eight');
-			var nine = document.querySelector('.nine');
-			var zero = document.querySelector('.zero');
-			var dot = document.querySelector('.dot');
+			const one = document.querySelector('.one');
+			const two = document.querySelector('.two');
+			const three = document.querySelector('.three');
+			const four = document.querySelector('.four');
+			const five = document.querySelector('.five');
+			const six = document.querySelector('.six');
+			const seven = document.querySelector('.seven');
+			const eight = document.querySelector('.eight');
+			const nine = document.querySelector('.nine');
+			const zero = document.querySelector('.zero');
+			const dot = document.querySelector('.dot');
 			//Operators Buttons
-			var equal = document.querySelector('.equal');
-			var plus = document.querySelector('.plus');
-			var minus = document.querySelector('.minus');
-			var divid = document.querySelector('.divid');
-			var multiply = document.querySelector('.multiply');
-			var sqrt = document.querySelector('.sqrt');
-			var mod = document.querySelector('.mod');
-			var sqr = document.querySelector('.sqr');
-			var cube = document.querySelector('.cube');
-			var pow = document.querySelector('.pow');
-			var fact = document.querySelector('.fact');
+			const equal = document.querySelector('.equal');
+			const plus = document.querySelector('.plus');
+			const minus = document.querySelector('.minus');
+			const divid = document.querySelector('.divid');
+			const multiply = document.querySelector('.multiply');
+			const sqrt = document.querySelector('.sqrt');
+			const mod = document.querySelector('.mod');
+			const sqr = document.querySelector('.sqr');
+			const cube = document.querySelector('.cube');
+			const pow = document.querySelector('.pow');
+			const nroot = document.querySelector('.nroot');
 			//control buttons
-			var clear = document.querySelector('.clear');
-			var back = document.querySelector('.back');
-			var lab = document.querySelector('.lbl');
+			const clear = document.querySelector('.clear');
+			const back = document.querySelector('.back');
+			const lab = document.querySelector('.lbl');
 
 			back.style.background = "#CE688A";
 			back.style.color = "white";
@@ -285,15 +299,17 @@
 				lab.innerHTML = numberWithCommas(num1)+"<sup>^</sup>";
 				opSet = true;
 			});
-			fact.addEventListener('click', function(){
+			nroot.addEventListener('click', function(){
 				playSound();
+				if(operator){
+					calculate();
+					opSet = true;
+				}
 				num1 = display.value;
 				num1 = Number(removeComma(num1));
-				answer = factorial(num1);
-				answer= numberWithCommas(answer)
-				display.value = answer;
-				calculated = true;
-				lab.innerHTML = numberWithCommas(num1)+"!";
+				operator = "nr";
+				lab.innerHTML = "&radic;"+numberWithCommas(num1);
+				opSet = true;
 			});
 			equal.addEventListener('click', function(){
 				playSound(); 
@@ -343,6 +359,13 @@
 						answer= numberWithCommas(answer);
 						display.value = answer;
 						lab.innerHTML = numberWithCommas(num1) + "<sup>"+numberWithCommas(num2)+"</sup>" +" = "+ answer;
+						calculated = true;
+						break;
+					case "nr":
+						answer = nthroot(num1, Number(num2));
+						//answer= numberWithCommas(answer);
+						display.value = Math.abs(answer);
+						lab.innerHTML = "<sup>"+numberWithCommas(num2)+"</sup>&radic;" + numberWithCommas(num1) +" = "+ answer;
 						calculated = true;
 						break;
 					default:
